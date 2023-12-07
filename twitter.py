@@ -15,6 +15,8 @@ import sys
 import numpy as np
 import os
 
+SAVE_DIR = "Dataset_3_processed.csv" if sys.argv.__len__() == 1 else sys.argv[1]
+
 _MessageBox = ctypes.windll.user32.MessageBoxW
 def alert(message, title="Retrieving data from twitter url"):
     return _MessageBox(None, message, title, 0x00)
@@ -45,7 +47,7 @@ def resp_to_dict(resp_text:str) -> dict | None:
     except json.JSONDecodeError:
         return {}
     
-SAVE_DIR = "Dataset_3_processed.csv" if sys.argv.__len__() == 1 else sys.argv[1]
+
 if __name__ == "__main__":
     multiprocessing.freeze_support()
     max_cpu_count = multiprocessing.cpu_count()
