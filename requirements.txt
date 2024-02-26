@@ -21,7 +21,7 @@ jupyter_core==5.5.0
 matplotlib-inline==0.1.6
 nest-asyncio==1.5.8
 numpy==1.26.2
-orjson==3.9.10
+orjson==3.9.15
 packaging==23.2
 pandarallel==1.6.5
 pandas==2.1.3
